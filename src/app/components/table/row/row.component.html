@@ -1,0 +1,20 @@
+<!-- <tr class="bg-white border-b border-b-paradiso-200"> -->
+  <td scope="col" class="p-4">
+    {{ factura?.folio }}
+  </td>
+  <td scope="col" class="p-4 capitalize">
+    {{ factura?.tipo_de_comprobante }}
+  </td>
+  <td scope="col" class="p-4">
+    {{ factura?.fecha_expedicion }}
+  </td>
+  <td scope="col" class="p-4">{{factura?.uuid}}</td>
+  <td scope="col" class="p-4 {{factura?.estatus === 'Vigente' ? 'text-green-600' : 'text-red-600'}}">
+    {{ factura?.estatus }}
+  </td>
+  <td scope="col" class="p-4">
+    <a href='https://qa-contalink.herokuapp.com/facturas/{{factura?.id}}`' target="_blank" rel="noopener noreferrer" class="btn bg-paradiso-600 text-white hover:bg-paradiso-500">
+      Ver factura
+    </a>
+  </td>
+<!-- </tr> -->

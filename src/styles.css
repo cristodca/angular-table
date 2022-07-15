@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-input {
+    @apply w-full bg-paradiso-50 px-4 py-2 rounded border border-paradiso-100;
+  }
+  .btn {
+    @apply px-4 py-2 rounded border transition-all duration-75 btn-disabled;
+  }
+  .btn-disabled {
+    @apply disabled:bg-slate-400 text-paradiso-900 disabled:hover:bg-slate-400 disabled:hover:text-paradiso-900 disabled:hover:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply bg-paradiso-300 text-paradiso-900 hover:bg-paradiso-400 hover:text-paradiso-50 hover:shadow-md;
+  }
+}

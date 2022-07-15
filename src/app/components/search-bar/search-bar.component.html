@@ -1,0 +1,11 @@
+<div class="flex gap-4" [formGroup]="searchForm">
+  <input
+    type="text"
+    class="form-input bg-white"
+    name=""
+    id=""
+    placeholder="Buscar..."
+    formControlName="search"
+  />
+  <button class="btn btn-primary" (click)="setParamToSearch()">Buscar</button>
+</div>

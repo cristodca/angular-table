@@ -1,0 +1,39 @@
+<div
+  class="grid grid-cols-2 lg:grid-cols-4 gap-4 py-8 px-4 bg-white rounded-lg shadow"
+  [formGroup]="dateForm"
+>
+  <div class="flex flex-col gap-2">
+    <label class="text-paradiso-900 font-medium" for="date-start"
+      >Fecha de inicio</label
+    >
+    <input
+      class="form-input"
+      type="date"
+      name="date-start"
+      id="date-start"
+      formControlName="dateStart"
+    />
+  </div>
+  <div class="flex flex-col gap-2">
+    <label class="text-paradiso-900 font-medium" for="date-end"
+      >Fecha final</label
+    >
+    <input
+      class="form-input"
+      type="date"
+      name="date-end"
+      id="date-end"
+      formControlName="dateEnd"
+    />
+  </div>
+  <div class="flex items-center justify-end col-span-2">
+    <!-- Este botón no se debe estar disponible si las fechas no están llenas -->
+    <button
+      class="btn btn-primary"
+      [disabled]="dateForm.invalid"
+      (click)="getFacturas()"
+    >
+      Consultar
+    </button>
+  </div>
+</div>

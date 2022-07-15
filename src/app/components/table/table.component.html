@@ -1,0 +1,24 @@
+<div class="overflow-x-auto relative">
+  <table
+    class="w-full text-sm text-left text-paradiso-700 border border-paradiso-200 rounded-lg"
+  >
+    <thead class="text-paradiso-100 bg-paradiso-500 font-bold">
+      <tr>
+        <th scope="col" class="p-4">Folio</th>
+        <th scope="col" class="p-4">Tipo de Comprobante</th>
+        <th scope="col" class="p-4">Fecha</th>
+        <th scope="col" class="p-4">UUID</th>
+        <th scope="col" class="p-4">Estatus</th>
+        <th scope="col" class="p-4">Acciones</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="true">
+      <tr
+        app-row
+        *ngFor="let factura of (facturasEmitidasServices.getFacturasEmitidas() | filter: searchServices.getToSearch())"
+        [factura]="factura"
+        class="bg-white border-b border-b-paradiso-200"
+      ></tr>
+    </tbody>
+  </table>
+</div>
